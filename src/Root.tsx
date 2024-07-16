@@ -1,20 +1,19 @@
 import { Still } from "remotion";
-import { PreviewCard } from "./PreviewCard";
-import { myCompSchema } from "./PreviewCard";
+import { paramSchema, WakscordCard } from "./WakscordCard";
 
 export const RemotionRoot: React.FC = () => {
   return (
     <>
       <Still
-        id="PreviewCard"
-        component={PreviewCard}
-        width={1200}
-        height={627}
-        schema={myCompSchema}
+        id="WakscordCard"
+        component={WakscordCard}
+        width={2048}
+        height={2048}
+        schema={paramSchema}
         defaultProps={{
-          title: "Welcome to Remotion" as const,
-          description: "Edit Video.tsx to change template" as const,
-          color: "#0B84F3" as const,
+          member: "고세구",
+          message: "하이빵까루",
+          time: "03:00",
         }}
       />
     </>
